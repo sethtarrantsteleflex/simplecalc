@@ -34,6 +34,10 @@ def calculate():
             result = multiply(num1, num2)
         elif operation == '/':
             result = divide(num1, num2)
+            if result == "Error: Division by zero":
+                messagebox.showerror("Math Error", "Division by zero is not allowed.")
+                result_label.config(text="Result: ")
+                return
         else:
             result = "Invalid operation"
 
