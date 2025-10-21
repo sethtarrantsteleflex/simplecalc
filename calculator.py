@@ -34,8 +34,7 @@ def calculate():
         elif operation == '/':
             result = divide(num1, num2)
             if result == "Error: Division by zero":
-                messagebox.showerror("Math Error", "Division by zero is not allowed.")
-                result_label.config(text="Result: ")
+                result_label.config(text="Math Error: Division by zero is not allowed.")
                 return
         else:
             result = "Invalid operation"
