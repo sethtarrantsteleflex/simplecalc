@@ -1,9 +1,6 @@
 # IDE
 .vscode/
 
-# VSCode Extensions
-.coveragerc
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
