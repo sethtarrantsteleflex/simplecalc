@@ -14,10 +14,29 @@ This project is a Python-based calculator GUI application with comprehensive uni
 - **Comprehensive Tests**: 16 unit tests with coverage tracking
 - **GUI Interface**: Built with tkinter
 
+## Installation
+
+### For Development
+
+```bash
+# Install in editable mode with dev dependencies
+pip install -e ".[dev]"
+```
+
+### For Use
+
+```bash
+pip install .
+```
+
 ## Running program
 
 ```bash
-python calculator.py
+# After installation
+simplecalc
+
+# Or directly from source
+python -m simplecalc.calculator
 ```
 
 ## Running tests
@@ -176,12 +195,35 @@ The project uses `.coveragerc` for coverage configuration:
 
 ```text
 simplecalc/
-├── calculator.py          # Main calculator module with GUI
-├── test_calculator.py     # Unit tests
-├── .coveragerc            # Coverage configuration
-├── README.md              # This file
-└── LICENSE                # Project license
+├── src/
+│   └── simplecalc/
+│       ├── __init__.py           # Package initialization
+│       └── calculator.py         # Main calculator module with GUI
+├── tests/
+│   ├── __init__.py               # Test package initialization
+│   └── test_calculator.py        # Unit tests
+├── .github/                      # GitHub configuration and documentation
+├── .coveragerc                   # Coverage configuration
+├── .flake8                       # Flake8 linter configuration
+├── .pre-commit-config.yaml       # Pre-commit hooks configuration
+├── pyproject.toml                # Project configuration and dependencies
+├── requirements-dev.txt          # Development dependencies
+├── README.md                     # This file
+└── LICENSE                       # Project license
 ```
+
+This structure follows Python best practices:
+- **src/simplecalc/**: Source code in a package directory
+- **tests/**: All tests in a dedicated directory
+- **pyproject.toml**: Modern Python project configuration
+- **Configuration files**: Linting, formatting, and coverage configs at root
+
+## Documentation
+
+- **[Project Structure Guide](PROJECT_STRUCTURE.md)**: Quick reference for the project layout
+- **[Migration Guide](MIGRATION_GUIDE.md)**: Detailed migration from old to new structure
+- **[Python Instructions](.github/instructions/python.instructions.md)**: Python-specific guidelines
+- **[Evergreen Development](.github/instructions/evergreen-development.instructions.md)**: Best practices
 
 ## Future Enhancements
 
@@ -191,3 +233,5 @@ simplecalc/
 - [ ] Dark theme support
 - [ ] Keyboard input support
 - [ ] Configuration file for customization
+- [ ] Web interface using Flask/FastAPI
+- [ ] REST API for calculator operations

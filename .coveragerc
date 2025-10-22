@@ -1,10 +1,19 @@
 [run]
 branch = True
-source = .
+source = src
+omit = 
+    */tests/*
+    */test_*
 
 [report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
 show_missing = True
-skip_covered = True
+skip_covered = False
 
 [html]
 directory = coverage_html_report

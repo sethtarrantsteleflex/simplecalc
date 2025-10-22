@@ -24,7 +24,7 @@ This project is a simple calculator application built using Python. It includes 
 ## Setup Instructions
 
 ### 1. Install Python
-- Download and install Python from [python.org](https://www.python.org/).
+- Download and install Python from the official website: `https://www.python.org/`.
 - Ensure Python is added to your system's PATH.
 
 ### 2. Clone the Repository
@@ -61,8 +61,21 @@ This will launch the graphical user interface for the calculator.
 ## Running Tests
 
 ### 1. Run All Tests
+
+**Using unittest:**
 ```bash
-python -m unittest -v test_calculator.py
+python -m unittest discover -s tests -v
+```
+
+**Using pytest:**
+```bash
+pytest tests/ -v
+```
+
+**With coverage:**
+```bash
+coverage run -m unittest discover -s tests
+coverage report
 ```
 
 ### 2. Run Tests in VS Code
@@ -75,12 +88,34 @@ python -m unittest -v test_calculator.py
 ## Project Structure
 ```
 .
-├── calculator.py        # Main application file with GUI and math functions
-├── test_calculator.py   # Unit tests for the math functions
-├── README.md            # Project documentation
-├── LICENSE              # License file
-└── __pycache__/         # Compiled Python files (auto-generated)
+├── src/
+│   └── simplecalc/
+│       ├── __init__.py           # Package initialization
+│       └── calculator.py         # Main application file with GUI and math functions
+├── tests/
+│   ├── __init__.py               # Test package initialization
+│   └── test_calculator.py        # Unit tests for the math functions
+├── .github/                      # GitHub configuration and documentation
+├── pyproject.toml                # Project configuration and dependencies
+├── requirements-dev.txt          # Development dependencies
+├── .coveragerc                   # Coverage configuration
+├── .flake8                       # Linting configuration
+├── .pre-commit-config.yaml       # Pre-commit hooks
+├── MANIFEST.in                   # Package manifest
+├── MIGRATION_GUIDE.md            # Migration documentation
+├── README.md                     # Project documentation
+├── LICENSE                       # License file
+└── __pycache__/                  # Compiled Python files (auto-generated)
 ```
+
+### Structure Explanation
+
+This project follows the **src-layout** pattern, which is the recommended Python project structure:
+
+- **src/simplecalc/**: Contains the source code as an installable package
+- **tests/**: Contains all unit tests in a dedicated directory
+- **pyproject.toml**: Modern Python project configuration (PEP 517/518)
+- **Configuration files**: Linting, formatting, and coverage configs at root level
 
 ---
 
