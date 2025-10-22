@@ -221,8 +221,8 @@ This structure follows Python best practices:
 
 ## Documentation
 
-- **[Project Structure Guide](PROJECT_STRUCTURE.md)**: Quick reference for the project layout
-- **[Migration Guide](MIGRATION_GUIDE.md)**: Detailed migration from old to new structure
+- **[Project Structure Guide](.github/PROJECT_STRUCTURE.md)**: Quick reference for the project layout
+- **[Migration Guide](.github/MIGRATION_GUIDE.md)**: Detailed migration from old to new structure
 - **[Python Instructions](.github/instructions/python.instructions.md)**: Python-specific guidelines
 - **[Evergreen Development](.github/instructions/evergreen-development.instructions.md)**: Best practices
 
