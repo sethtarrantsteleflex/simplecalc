@@ -213,6 +213,7 @@ simplecalc/
 ```
 
 This structure follows Python best practices:
+
 - **src/simplecalc/**: Source code in a package directory
 - **tests/**: All tests in a dedicated directory
 - **pyproject.toml**: Modern Python project configuration
